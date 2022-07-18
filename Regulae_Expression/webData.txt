@@ -1,0 +1,12 @@
+<ul><li>(<i>empty set</i>) ∅ denoting the set ∅.</li>
+<li>(<i><a href="/wiki/Empty_string" title="Empty string">empty string</a></i>) ε denoting the set containing only the "empty" string, which has no characters at all.</li>
+<li>(<i><a href="/wiki/String_literal" title="String literal">literal character</a></i>) <code>a</code> in Σ denoting the set containing only the character <i>a</i>.</li></ul>
+<p>Given regular expressions R and S, the following operations over them are defined
+to produce regular expressions:
+</p>
+<ul><li>(<i><a href="/wiki/Concatenation" title="Concatenation">concatenation</a></i>) <code>(RS)</code> denotes the set of strings that can be obtained by concatenating a string accepted by R and a string accepted by S (in that order). For example, let R denote {"ab", "c"} and S denote {"d", "ef"}. Then, <code>(RS)</code> denotes {"abd", "abef", "cd", "cef"}.</li>
+<li>(<i><a href="/wiki/Alternation_(formal_language_theory)" title="Alternation (formal language theory)">alternation</a></i>) <code>(R|S)</code> denotes the <a href="/wiki/Set_union" class="mw-redirect" title="Set union">set union</a> of sets described by R and S. For example, if R describes {"ab", "c"} and S describes {"ab", "d", "ef"}, expression <code>(R|S)</code> describes {"ab", "c", "d", "ef"}.</li>
+<li>(<i><a href="/wiki/Kleene_star" title="Kleene star">Kleene star</a></i>) <code>(R*)</code> denotes the smallest <a href="/wiki/Subset" title="Subset">superset</a> of the set described by <i>R</i> that contains ε and is <a href="/wiki/Closure_(mathematics)" title="Closure (mathematics)">closed</a> under string concatenation. This is the set of all strings that can be made by concatenating any finite number (including zero) of strings from the set described by R. For example, if R denotes {"0", "1"}, <code>(R*)</code> denotes the set of all finite <a href="/wiki/Binary_string" class="mw-redirect" title="Binary string">binary strings</a> (including the empty string). If R denotes {"ab", "c"}, <code>(R*)</code> denotes {ε, "ab", "c", "abab", "abc", "cab", "cc", "ababab", "abcab", ... }.</li></ul>
+<p>To avoid parentheses it is assumed that the Kleene star has the highest priority, then concatenation and then alternation. If there is no ambiguity then parentheses may be omitted. For example, <code>(ab)c</code> can be written as <code>abc</code>, and <code>a|(b(c*))</code> can be written as <code>a|bc*</code>.
+Many textbooks use the symbols ∪, +, or ∨ for alternation instead of the vertical bar.
+</p><p><b>Examples:</b>
