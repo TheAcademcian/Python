@@ -1,0 +1,18 @@
+
+WARNING:root:Warning message_1!
+ERROR:root:Error message_1
+CRITICAL:root:Critical message_1
+WARNING:root:Warning message_2
+ERROR:root:Error message_2
+WARNING:root:Warning message_2
+ERROR:root:Error message_3
+ERROR:root:division by zero
+Traceback (most recent call last):
+  File "<ipython-input-79-1b402b2cb117>", line 9, in <module>
+    print("The output is: ",x/y)
+ZeroDivisionError: division by zero
+ERROR:root:invalid literal for int() with base 10: 'o'
+Traceback (most recent call last):
+  File "<ipython-input-80-1b402b2cb117>", line 8, in <module>
+    y=int(input("Enter denominator value: "))
+ValueError: invalid literal for int() with base 10: 'o'
